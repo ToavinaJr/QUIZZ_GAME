@@ -1,7 +1,6 @@
-* {
+*{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     /* border: 1px solid red; */
 }
 
@@ -9,8 +8,11 @@ a{
     text-decoration: none;
 }
 
-.container{
+body{
     background: #5b7ff7;
+}
+
+#container{    
     width: 100vw;
     height: 100vh;
 }
@@ -22,6 +24,13 @@ header {
     padding: 10px;
     position: sticky;
     top: 0;
+}
+
+img#logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fcfcfc;
 }
 
 nav ul {
@@ -59,9 +68,9 @@ main section {
     margin-top: 40px;
 }
 
-#auhtors {
+#authors {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #home {
@@ -91,20 +100,24 @@ main section {
     color: #fcfcfc;
 }
 
+#authors{
+    display: flex;
+    flex-direction: row;
+}
+
 #authors > p{
+    color: #040027;
+    font-size: bold;
+    font-weight: bold;
     margin-top: 70px;
     font-size: 32px;
 }
 
 #authors-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
+
 
 .card {
     display: flex;
@@ -114,15 +127,15 @@ main section {
     background: #040027;
     border-radius: 10px;
     color: #fcfcfc;
-    width: 200px;
-    height: 300px;
-    margin: 40px;
+    width: 180px;
+    height: 200px;
+    margin: 20px;
     padding: 15px;
 }
 
 .card p{
     background: #f88e02;
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
     text-align: center;
     color: #212121;
     margin-bottom: 20px;
